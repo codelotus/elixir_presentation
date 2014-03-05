@@ -208,6 +208,8 @@ iex> length [ 1, 2, 3 ]
                 <section>
                     <h2>Matching, not assignment</h2>
                     <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+iex> a = 1
+1
 iex> [head | tail] = [1,2,3]
 [1,2,3]
 iex> head
@@ -222,7 +224,7 @@ iex> tail
                     <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
 defmodule MyList do
   def len([]), do: 0
-  def len( [head | tail]), do: 1 + len(tail)
+  def len( [head | tail] ), do: 1 + len(tail)
 end
                     </code></pre>
                 </section>
@@ -247,7 +249,7 @@ end
 def triangle_value(_,0), do: 1
 def triangle_value(r,1), do: r
 def triangle_value(r,c) when r == c, do: 1
-def triangle_value(r,c) when r > c do
+def triangle_value(r,c) do
   div( fac(r), (fac(c) * fac(r-c)) )
 end
                     </code></pre>
@@ -275,6 +277,7 @@ http://blog.quarternotecoda.com/blog/2013/08/05/adventures-in-elixir/
                 </section>
                 
                 <section>
+                    <h2>Pipelining</h2>
                     <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
 defmodule Words do
   def count(sentence) do
@@ -383,7 +386,7 @@ end
                 center: true,
 
                 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
 
                 // Parallax scrolling
                 // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
