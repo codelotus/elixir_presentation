@@ -1,0 +1,11 @@
+presentation/config/Configuration.class
+presentation/Constants$Url.class
+presentation/Main.class
+presentation/serialization/SerializationProvider.class
+presentation/serialization/XmlSerializationProcessor.class
+presentation/Constants$Routes.class
+presentation/Constants.class
+presentation/config/MetricsConfig.class
+presentation/controller/SampleController.class
+presentation/serialization/JsonSerializationProcessor.class
+presentation/Routes.class
